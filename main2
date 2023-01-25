@@ -1,0 +1,11 @@
+num = int(input("Введите число от 0 до 99: "))
+if 0 <= num <= 99:
+    print(num, end=" ")
+    if int(num) == 1:
+        print("копейка")
+    elif 2 <= num <= 4:
+        print("копейки")
+    else:
+        print("копеек")
+else:
+    print("Ошибка ввода")
