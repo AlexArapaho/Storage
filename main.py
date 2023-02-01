@@ -21,5 +21,5 @@
 
 # print("Hello")
 
-a = 0
-print(a)
+str1 = "Я изучаю Nython. Мне нравится Nython. Nython очень интересный язык программирования."
+
