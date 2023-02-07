@@ -26,4 +26,28 @@
 # str2 = str1.replace("о", "О")
 # print(str2)
 
-a = input().split()
+# def foo(x):
+#     if sum(x[0:3]) == sum([x[3:7]]):
+#         print("Это счастливое число!")
+#     else:
+#         print("Это несчастливое число")
+#
+# foo("123321")
+
+x = input()
+a = x[0:3]
+b = x[3:7]
+t1 = t2 = 0
+for i in a:
+    t1 = t1 + int(i)
+for j in b:
+    t2 = t2 + int(j)
+if t1 == t2:
+    print("счастливое число")
+else:
+    print("nope")
+print(t1)
+print(t2)
+
+
+
