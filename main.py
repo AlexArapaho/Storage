@@ -66,24 +66,67 @@
 #     if found == False:
 #         print(f'The number {b} is not found')
 
-import os
+# import os
+#
+# def rem_dir(x):
+#     print("Deleting folders: ")
+#     print("=" * 30)
+#     # print(os.listdir(x))
+#     for root, dirs, files in os.walk(x):
+#         if not os.listdir(root):
+#             os.rmdir(root)
+#             print(f"folder {root} deleted")
+#     print("=" * 30)
 
-def rem_dir(x):
-    print("Deleting folders: ")
-    print("=" * 30)
-    # print(os.listdir(x))
-    for root, dirs, files in os.walk(x):
-        if not os.listdir(root):
-            os.rmdir(root)
-            print(f"folder {root} deleted")
-    print("=" * 30)
-
-rem_dir("test")
+# rem_dir("test")
 
 # for root, dirs, files in os.walk("test"):
 #     print("root:", root)
 #     print("dirs:", dirs)
 #     print("files:", files)
+#
+# a = {3, 4}
+# b = {1, 2}
+# c = set()
+# i = 0
+# j = 0
+# for i in a:
+#     for j in b:
+#         c.add((i, j))
+#         i += 1
+#         j += 1
+#
+# print(c)
+
+import re
+
+class UserData:
+    def __init__(self, fio, age, ps, weight):
+        self.verify_fio(fio)
+        self.__age = age
+        self.__password = ps
+        self.__weight = weight
+    @staticmethod
+    def verify_fio(fio):
+        if not isinstance(fio, str):
+            raise TypeError("ФИО должно быть строкой")
+        f = fio.split()
+        if len(f) != 3:
+            raise TypeError("Неверный формат ФИО")
+        letters = "".join(re.findall("[А-яё-]", fio))
+        for s in f:
+            if len(s.strip(letters)) != 0:
+                raise TypeError("В ФИО можно использовать только буквы и дефис!")
+    @staticmethod
+    def verify_age(age):
+        if not isinstance(age, int) and age < 18 and age > 120:
+            raise TypeError()
+
+p1 = UserData("Иван Иванович Иванов", 26, "123 321", 80.8)
+p1.verify_fio("Иван Иванович Иванов")
+
+
+
 
 
 
