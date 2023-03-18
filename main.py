@@ -99,31 +99,61 @@
 # print(c)
 
 import re
+#
+# class UserData:
+#     def __init__(self, fio, age, ps, weight):
+#         self.verify_fio(fio)
+#         self.__age = age
+#         self.__password = ps
+#         self.__weight = weight
+#     @staticmethod
+#     def verify_fio(fio):
+#         if not isinstance(fio, str):
+#             raise TypeError("ФИО должно быть строкой")
+#         f = fio.split()
+#         if len(f) != 3:
+#             raise TypeError("Неверный формат ФИО")
+#         letters = "".join(re.findall("[А-яё-]", fio))
+#         for s in f:
+#             if len(s.strip(letters)) != 0:
+#                 raise TypeError("В ФИО можно использовать только буквы и дефис!")
+#     @staticmethod
+#     def verify_age(age):
+#         if not isinstance(age, int) and age < 18 and age > 120:
+#             raise TypeError()
+#
+# p1 = UserData("Иван Иванович Иванов", 26, "123 321", 80.8)
+# p1.verify_fio("Иван Иванович Иванов")
 
-class UserData:
-    def __init__(self, fio, age, ps, weight):
-        self.verify_fio(fio)
-        self.__age = age
-        self.__password = ps
-        self.__weight = weight
-    @staticmethod
-    def verify_fio(fio):
-        if not isinstance(fio, str):
-            raise TypeError("ФИО должно быть строкой")
-        f = fio.split()
-        if len(f) != 3:
-            raise TypeError("Неверный формат ФИО")
-        letters = "".join(re.findall("[А-яё-]", fio))
-        for s in f:
-            if len(s.strip(letters)) != 0:
-                raise TypeError("В ФИО можно использовать только буквы и дефис!")
-    @staticmethod
-    def verify_age(age):
-        if not isinstance(age, int) and age < 18 and age > 120:
-            raise TypeError()
+class Cat:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-p1 = UserData("Иван Иванович Иванов", 26, "123 321", 80.8)
-p1.verify_fio("Иван Иванович Иванов")
+    def info(self):
+        print(f'Я кот. Меня зовут {self.name}, мне {self.age} лет')
+
+    def make_sound(self):
+        print(f'{self.name} мяукает')
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print(f'Я собака. Меня зовут {self.name}, мне {self.age} лет')
+
+    def make_sound(self):
+        print(f'{self.name} гавкает')
+
+p1 = Cat("Пушок", 2.5)
+p2 = Dog("Мухтар", 4)
+a = [p1, p2]
+
+for i in a:
+    i.info()
+    i.make_sound()
 
 
 
