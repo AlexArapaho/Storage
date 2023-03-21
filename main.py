@@ -125,35 +125,52 @@ import re
 # p1 = UserData("Иван Иванович Иванов", 26, "123 321", 80.8)
 # p1.verify_fio("Иван Иванович Иванов")
 
-class Cat:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# class Cat:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def info(self):
+#         print(f'Я кот. Меня зовут {self.name}, мне {self.age} лет')
+#
+#     def make_sound(self):
+#         print(f'{self.name} мяукает')
+#
+# class Dog:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def info(self):
+#         print(f'Я собака. Меня зовут {self.name}, мне {self.age} лет')
+#
+#     def make_sound(self):
+#         print(f'{self.name} гавкает')
+#
+# p1 = Cat("Пушок", 2.5)
+# p2 = Dog("Мухтар", 4)
+# a = [p1, p2]
+#
+# for i in a:
+#     i.info()
+#     i.make_sound()
 
-    def info(self):
-        print(f'Я кот. Меня зовут {self.name}, мне {self.age} лет')
+class Power:
+    def __init__(self, arg):
+        self.arg = arg
 
-    def make_sound(self):
-        print(f'{self.name} мяукает')
+    def __call__(self, func):
+        def wrap(a, b):
+            return func(a, b) ** self.arg
 
-class Dog:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+        return wrap
 
-    def info(self):
-        print(f'Я собака. Меня зовут {self.name}, мне {self.age} лет')
+@Power(2)
+def um(a, b):
+    return a*b
 
-    def make_sound(self):
-        print(f'{self.name} гавкает')
+print(um(2, 3))
 
-p1 = Cat("Пушок", 2.5)
-p2 = Dog("Мухтар", 4)
-a = [p1, p2]
-
-for i in a:
-    i.info()
-    i.make_sound()
 
 
 
