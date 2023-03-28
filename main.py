@@ -1,7 +1,7 @@
 # print("Выполнил задание \n\t\t\tГрибов Александр Валерьевич, \n\t\t\t\t\t\t\t\t\tслушатель группы Python214")
 #
 # print()
-
+import json
 #
 #
 # def deco(func):
@@ -303,45 +303,87 @@ import pickle
 # print(json.dumps(x))
 # print(json.dumps(y, ensure_ascii=False))
 
+# import json
+# from random import choice
+#
+#
+# def get_person():
+#     name = ''
+#     tel = ''
+#     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+#     nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+#
+#     while len(name) != 7:
+#         name += choice(letters)
+#     # print(name)
+#
+#     while len(tel) != 10:
+#         tel += choice(nums)
+#     # print(tel)
+#
+#     person = {
+#         "name": name,
+#         "tel": tel
+#     }
+#
+#     return person
+#
+#
+# def write_json(person_dict):
+#     try:
+#         data = json.load(open('person.json'))
+#     except FileNotFoundError:
+#         data = []
+#
+#     data.append(person_dict)
+#     with open('person.json', 'w') as f:
+#         json.dump(data, f, indent=2)
+#
+#
+# for i in range(5):
+#     write_json(get_person())
+
+# import time
+# def deco(func):
+#     def wrap(y):
+#         print(func(y))
+#         return func(y)**65
+#     return wrap
+#
+#
+# a = time.monotonic()
+# @deco
+# def num(x):
+#     return x**85
+#
+#
+# print(num(3))
+# b = time.monotonic()
+#
+# c = b - a
+# print(c)
+
+
+# def func1(a):
+#     def func2(b):
+#         return a * b
+#
+#     return func2
+#
+#
+#
+# x = func1(2)
+# print(x(3))
+
+import requests
 import json
-from random import choice
+
+response = requests.get("https://jsonplaceholder.typicode.com/todos")
+print(response)
+todos = json.loads(response.text)
+print(todos)
 
 
-def get_person():
-    name = ''
-    tel = ''
-    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
-    nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-
-    while len(name) != 7:
-        name += choice(letters)
-    # print(name)
-
-    while len(tel) != 10:
-        tel += choice(nums)
-    # print(tel)
-
-    person = {
-        "name": name,
-        "tel": tel
-    }
-
-    return person
-
-
-def write_json(person_dict):
-    try:
-        data = json.load(open('person.json'))
-    except FileNotFoundError:
-        data = []
-
-    data.append(person_dict)
-    with open('person.json', 'w') as f:
-        json.dump(data, f, indent=2)
-
-
-for i in range(5):
-    write_json(get_person())
 
 
 

@@ -32,6 +32,7 @@ def get_person():
 
     return person
 
+
 def write_json(person_dict):
     try:
         data = json.load(open('person.json'))
