@@ -374,14 +374,29 @@ import pickle
 #
 # x = func1(2)
 # print(x(3))
+#
+# import requests
+# import json
+#
+# response = requests.get("https://jsonplaceholder.typicode.com/todos")
+# print(response)
+# todos = json.loads(response.text)
+# print(type(todos))
+# print(todos)
 
-import requests
-import json
+import csv
 
-response = requests.get("https://jsonplaceholder.typicode.com/todos")
-print(response)
-todos = json.loads(response.text)
-print(todos)
+with open("data.csv") as f:
+    file_reader = csv.reader(f, delimiter=";")
+    print(file_reader)
+    count = 0
+    for row in file_reader:
+        if count == 0:
+            print(f"Файл содержит столбцы {', '.join(row)}")
+        else:
+            print(f"\t\t\t\t\t\t\t{row[0]}-{row[1]}. Родился в {row[2]}")
+        count += 1
+
 
 
 

@@ -104,7 +104,7 @@ class Countries:
                 print("Выберите из предложенных вариантов")
 
 
-p = Countries("countries.json")
+p = Countries("newfile.json")
 p.interact()
 
 
