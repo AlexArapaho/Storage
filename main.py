@@ -384,23 +384,337 @@ import pickle
 # print(type(todos))
 # print(todos)
 
+# import csv
+#
+# with open("data.csv") as f:
+#     file_reader = csv.reader(f, delimiter=";")
+#     print(file_reader)
+#     count = 0
+#     for row in file_reader:
+#         if count == 0:
+#             print(f"Файл содержит столбцы {', '.join(row)}")
+#         else:
+#             print(f"\t\t\t\t\t\t\t{row[0]}-{row[1]}. Родился в {row[2]}")
+#         count += 1
+
+# import requests
+# import json
+
+# response = requests.get("https://jsonplaceholder.typicode.com/todos")
+# print(response)
+# todos = json.loads(response.text)
+#
+#
+# todos_by_user = {}
+# for todo in todos:
+#     if todo["completed"]:
+#         try:
+#             todos_by_user[todo["userId"]] += 1
+#             print(todos_by_user)
+#         except KeyError:
+#             todos_by_user[todo["userId"]] = 1
+#             print("*", todos_by_user)
+
+
+# class Pet:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def show_name(self):
+#         print(f"{self.name}")
+#
+#     def show_species(self):
+#         print(f"{type(self).__name__}")
+#
+# class Dog(Pet):
+#     def __init__(self, sound, name):
+#         self.sound = sound
+#         super().__init__(name)
+#
+#
+#     def chase_cat(self):
+#         print("I'm chasing cats")
+#
+#     def make_sound(self):
+#         print(f"{self.sound}")
+#
+#
+# class Cat(Pet):
+#     def __init__(self, name,  sound="mew"):
+#        super().__init__(name)
+#     def catch_mouse(self):
+#         print("I'm catching mice")
+#
+#
+#
+#
+# p = Cat("Барсик")
+# p.show_species()
+# p1 = Dog("bark", "Барсик")
+# p1.show_species()
+# p1.make_sound()
+# class Employee:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def print_info(self):
+#         print("This is basic class")
+#
+# class Clerk(Employee):
+#     def print_info(self):
+#         print(self.name, self.age)
+#
+# p = Clerk("Ivanov", 32)
+# p.print_info()
+
+# n = int(input("Number of IP addresses: "))
+# m = [input("Enter IP-address: ") for i in range(n)]
+# y = []
+# dct = {}
+# for i in m:
+#     a = (list(map(int, i.split("."))))
+#     a.reverse()
+#     z = []
+#     for j in range(len(a)):
+#         b = a[j]**j
+#         z.append(b)
+#     c = sum(z)
+#     dct[i] = c
+#     y.append(c)
+# for i in sorted(dct.items()):
+#     print(i[0])
+
+
+# a = [1, [2, 3]]
+# b = a
+# c = a[:]
+#
+# a[1][0] = 1
+# print(b, c)
+
+
 import csv
 
-with open("data.csv") as f:
-    file_reader = csv.reader(f, delimiter=";")
-    print(file_reader)
-    count = 0
-    for row in file_reader:
-        if count == 0:
-            print(f"Файл содержит столбцы {', '.join(row)}")
-        else:
-            print(f"\t\t\t\t\t\t\t{row[0]}-{row[1]}. Родился в {row[2]}")
-        count += 1
+# with open("data.csv") as f:
+#     file_reader = csv.reader(f, delimiter=";")
+#     print(file_reader)
+#     count = 0
+#     for row in file_reader:
+#         if count == 0:
+#             print(f"Файл содержит столбцы {', '.join(row)}")
+#         else:
+#             print(f"\t\t\t\t\t\t\t{row[0]}-{row[1]}. Родился в {row[2]}")
+#         count += 1
+
+# with open("data.csv") as f:
+#     fn = ['Имя', 'Профессия', 'Год рождения']
+#     file_reader = csv.DictReader(f, delimiter=";", fieldnames=fn)
+#     count = 0
+#     for row in file_reader:
+#         print(row)
+#         if count == 0:
+#             print(f"Файл содержит столбцы {', '.join(row)}")
+#         print(f'{row["Имя"]} - {row["Профессия"]}. Родился в {row["Год рождения"]} году.')
+#         count += 1
+#     print(f'Всего в файле {count} строки')
+
+# with open('student.csv', 'w') as f:
+#     writer = csv.writer(f, delimiter=";", lineterminator="\r")
+#     writer.writerow(["Имя", "Класс", "Возраст"])
+#     writer.writerow(["Женя", "9", "15"])
+#     writer.writerow(["Саша", "5", "12"])
+#     writer.writerow(["Маша", "11", "18"])
+#
+# data = [['hostname', 'vendor', 'model', 'location'],
+#         ['sw1', 'Cisco', '3750', 'London, Best str'],
+#         ['sw2', 'Cisco', '3850', 'Liverpool, Better str'],
+#         ['sw3', 'Cisco', '3650', 'Liverpool, Better str'],
+#         ['sw4', 'Cisco', '3650', 'London, Best str']]
+#
+# with open('sw_data.csv', 'w') as f:
+#     writer = csv.writer(f, delimiter=";", lineterminator="\r")
+#     # for row in data:
+#     #     writer.writerow(row)
+#     writer.writerows(data)
+
+# with open('sw_data1.csv', 'w') as f:
+#     names = ["Имя", "Возраст"]
+#     writer = csv.DictWriter(f, delimiter=";", lineterminator="\r", fieldnames=names)
+#     writer.writeheader()
+#     writer.writerow({"Имя": "Саша", "Возраст": 6})
+#     writer.writerow({"Имя": "Маша", "Возраст": 12})
+#     writer.writerow({"Имя": "Вова", "Возраст": 15})
+
+# data = [{
+#
+#     'hostname': 'sw1',
+#     'location': 'London',
+#     'model': '3750',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw2',
+#     'location': 'Liverpool',
+#     'model': '3850',
+#     'vendor': 'Cisco'
+#
+# }, {
+#     'hostname': 'sw3',
+#     'location': 'Liverpool',
+#     'model': '3650',
+#     'vendor': 'Cisco'
+# }, {
+#     'hostname': 'sw4',
+#     'location': 'London',
+#     'model': '3650',
+#     'vendor': 'Cisco'
+# }]
+#
+# with open('dict_data1.csv', 'w') as f:
+#     writer = csv.DictWriter(f, delimiter=";", lineterminator="\r", fieldnames=list(data[0].keys()))
+#     writer.writeheader()
+#     for d in data:
+#         writer.writerow(d)
+
+from bs4 import BeautifulSoup
+
+
+# f = open('index.html').read()
+# soup = BeautifulSoup(f, "html.parser")
+# row = soup.find_all("div", class_="row")[1].find(class_="name").text
+# row = soup.find_all("div", {"data-set": "salary"})
+# row = soup.find("div", string="Alena").find_parent(class_="row")
+# row = soup.find("div", string="Alena").parent
+# row = soup.find("div", id="whois3").find_next_sibling()
+# row = soup.find("div", id="whois3").find_previous_sibling()
+# print(row)
+
+# def get_copywriter(tag):
+#     whois = tag.find("div", class_="whois")
+#     if "Copywriter" in whois:
+#         return tag
+#     return None
+
+
+# f = open('index.html', encoding="utf-8").read()
+# soup = BeautifulSoup(f, "html.parser")
+# copywriter = []
+# row = soup.find_all("div", class_="row")
+# for i in row:
+#     cw = get_copywriter(i)
+#     if cw:
+#         copywriter.append(cw)
+#
+# print(copywriter)
+
+# import re
+#
+# def get_salary(s):
+#     pattern = r"\d+"
+#     # res = re.search(pattern, s).group()
+#     res = re.findall(pattern, s)[0]
+#     print(res)
+#
+# f = open('index.html', encoding="utf-8").read()
+# soup = BeautifulSoup(f, "html.parser")
+# row = soup.find_all("div", {"data-set": "salary"})
+# for i in row:
+#      get_salary(i.text)
 
 
 
+# res = requests.get("https://ru.wordpress.org/")
+# # print(res.headers['content-type'])
+# # print(res.content)
+# #
+#
+# print(res.text)
+# import requests
+#
+#
+# from bs4 import BeautifulSoup
+#
+#
+# def get_html(url):
+#     res = requests.get(url)
+#     return res.text
+#
+# def get_data(html):
+#     soup = BeautifulSoup(html, "lxml")
+#     p1 = soup.find("header", id="masthead").find("p", class_="site-title").text
+#     print(p1)
+#
+#
+# def main():
+#     url = "https://ru.wordpress.org/"
+#     get_data(get_html(url))
+#
+# if __name__ == '__main__':
+#     main()
+#
+# import requests
+# import re
+#
+# from bs4 import BeautifulSoup
+#
+#
+# def get_html(url):
+#     res = requests.get(url)
+#     return res.text
+#
+# def refined(s):
+#     return re.sub(r"\D+", "", s)
+#
+#
+# def write_csv(data):
+#     with open('plugings.csv', 'a') as f:
+#         write = csv.writer(f, delimiter=";", lineterminator="\r")
+#         write.writerow((data['name'], data['url'], data['rating']))
+#
+#
+# def get_data(html):
+#     soup = BeautifulSoup(html, "lxml")
+#     p1 = soup.find_all("section", class_="plugin-section")[1]
+#     plugins = p1.find_all("article")
+#     for plugin in plugins:
+#         name = plugin.find("h3").text
+#         url = plugin.find("h3").find("a")["href"]
+#         rating = plugin.find('span', class_="rating-count").find("a").text
+#         r = refined(rating)
+#         data = {'name': name, 'url': url, 'rating': r}
+#         write_csv(data)
+#         print(data)
+#
+#
+# def main():
+#     url = "https://ru.wordpress.org/plugins/"
+#     get_data(get_html(url))
+#
+# if __name__ == '__main__':
+#     main()
 
 
+import requests
+
+
+from bs4 import BeautifulSoup
+
+
+def get_html(url):
+    res = requests.get(url)
+    return res.text
+
+def get_data(html):
+    soup = BeautifulSoup(html, "lxml")
+    elements = soup.find()
+    print(elements)
+
+
+def main():
+    url = "https://ru.wordpress.org/plugins/brows/blocks/"
+    get_data(get_html(url))
+
+if __name__ == '__main__':
+    main()
 
 
 

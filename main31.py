@@ -9,4 +9,3 @@ with open("data2.csv") as f:
         else:
             print(f"\t\t\t\t\t\t\t{row[0]}\t\t {row[1]}\t {row[2]}\t{row[3]}")
         count += 1
-        
