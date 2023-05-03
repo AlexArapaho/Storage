@@ -1,8 +1,8 @@
 # print("Выполнил задание \n\t\t\tГрибов Александр Валерьевич, \n\t\t\t\t\t\t\t\t\tслушатель группы Python214")
 #
 # print()
-import json
-#
+# import json
+# #
 #
 # def deco(func):
 #     def wrap(y):
@@ -575,7 +575,7 @@ import csv
 #     for d in data:
 #         writer.writerow(d)
 
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 
 # f = open('index.html').read()
@@ -783,8 +783,8 @@ from bs4 import BeautifulSoup
 #     main()
 
 
-import socket
-from view import index, blog
+# import socket
+# from view import index, blog
 
 # URLS = {
 #     '/': index,
@@ -882,25 +882,125 @@ from view import index, blog
     # DROP TABLE person_table
     # """)
 
+# import sqlite3
+#
+#
+# with sqlite3.connect('db_4.db') as con:
+#     cur = con.cursor()
+#     cur.execute("""
+#     SELECT *
+#     FROM Ware
+#     ORDER BY Price DESC
+#     LIMIT 2, 5
+#     """)
+#     # res = cur.fetchall()
+#     # print(res)
+#
+#     # for res in cur:
+#          # print(res)
+#
+#     res = cur.fetchone()
+#     print(res)
+#
+#     res2 = cur.fetchmany()
+#     print(res2)
+
+
 import sqlite3
 
+#
+# with sqlite3.connect('cars.db') as con:
+#     cur = con.cursor()
+#     cur.executescript("""
+#     CREATE TABLE IF NOT EXISTS cars(
+#         car_id INTEGER PRIMARY KEY AUTOINCREMENT,
+#         model TEXT,
+#         price INTEGER
+#     );
+#     CREATE TABLE IF NOT EXISTS cost(
+#         name TEXT,
+#         tr_in INTEGER,
+#         buy INTEGER
+#     );
+#     """
+#     )
+#
+#     cur.execute("INSERT INTO cars VALUES(NULL, 'Запорожец', 1000)")
+#     last_row_id = cur.lastrowid
+#     buy_car_id = 2
+#     cur.execute("INSERT INTO cost VALUES('Илья', ?, ?)", (last_row_id, buy_car_id))
 
-with sqlite3.connect('db_4.db') as con:
-    cur = con.cursor()
-    cur.execute("""
-    SELECT *
-    FROM Ware
-    ORDER BY Price DESC
-    LIMIT 2, 5
-    """)
-    # res = cur.fetchall()
-    # print(res)
+# def read_ava(n):
+#     try:
+#         with open(f"avatars/{n}.png", 'rb') as f:
+#             return f.read()
+#     except IOError as e:
+#         print(e)
+#         return False
+#
+# def write_ava(name, data):
+#     try:
+#         with open(name, 'wb') as f:
+#             f.write((data))
+#     except IOError as e:
+#         print(e)
+#         return False
+#     return True
+#
+#
+#
+# with sqlite3.connect('cars.db') as con:
+#     con.row_factory = sqlite3.Row
+#     cur = con.cursor()
+#     cur.executescript("""
+#         CREATE TABLE IF NOT EXISTS users(
+#         name TEXT,
+#         ava BLOB,
+#         score INTEGER
+#         );
+#     """)
+#
+#
+#
+#     img = read_ava(1)
+#     if img:
+#         binary = sqlite3.Binary(img)
+#         cur.execute("INSERT INTO users VALUES('Илья', ?, 1000)", (binary,))
 
-    # for res in cur:
-         # print(res)
+#     cur.execute("SELECT ava FROM users")
+#     img = cur.fetchone()['ava']
+#     write_ava('out.png', img)
+#
+# with sqlite3.connect('cars.db') as con:
+#     cur = con.cursor()
+#    with open ('sql_dump.sql', "w") as f:
+#        for sql in con.iterdump():
+#            f.write(sql)
 
-    res = cur.fetchone()
-    print(res)
 
-    res2 = cur.fetchmany()
-    print(res2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import os
+from Models.database import DATABASE_NAME, Session
+import create_database as db_creator
+
+
+if __name__ == '__main__':
+    db_is_created = os.path.exists(DATABASE_NAME)
+    if not db_is_created:
+        db_creator.create_database()
+
+
+    session = Session()

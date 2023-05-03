@@ -1,12 +1,49 @@
 1.	Выведите список студентов физико-математического факультета.
+SELECT FIO
+FROM STUDENT
+WHERE [Group] IN
+    (SELECT [Group]
+    From G
+    WHERE Kafedra IN
+        (SELECT Kafedra
+        From Kafedra
+        WHERE Decanat LIKE 'Физико-математический'
+        )
+    )
 
 2.	Студенты какой кафедры и факультета сдавали социологию.
+SELECT Decanat, Kafedra
+FROM Kafedra
+WHERE Kafedra IN
+    (SELECT Kafedra
+    FROM G
+    WHERE [Group] IN
+    (SELECT [Group]
+    FROM Student
+    WHERE ID_St IN
+    (SELECT Id_st
+    FROM Exzamen
+    WHERE Predmet LIKE 'Социология')
+    
+    ))
 
 3.	Выведите кафедры, список студентов, список студентов в алфавитном порядке.
+SELECT s.FIO, 
+    (SELECT g.Kafedra
+    FROM G g
+    WHERE s."Group"=g."Group") AS [Кафедра]
+FROM Student s
+ORDER BY s.FIO
 
 4.	Вывести номера зачеток только студентов физико-технического факультета.
 
 5.	Выведите студентов физико-технического факультета сдавших иностранный язык на 5.
+SELECT FIO
+FROM Student
+WHERE ID_St IN
+    (SELECT ID_st
+    FROM Exzamen
+    WHERE Predmet LIKE 'Иностр. язык' AND Ball=5)
 
 6.	Подсчитать сколько различных предметов сдавалось в сессию.
 
