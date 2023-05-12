@@ -979,28 +979,238 @@ import sqlite3
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 import os
-from Models.database import DATABASE_NAME, Session
+from models.database import DATABASE_NAME, Session
 import create_database as db_creator
+from sqlalchemy import and_, or_, not_, desc, distinct
+from models.student import Student
+from models.group import Group
+from models.lesson import Lesson, association_table
+
+#
+# if __name__ == '__main__':
+#     db_is_created = os.path.exists(DATABASE_NAME)
+#     if not db_is_created:
+#         db_creator.create_database()
+#
+#
+#
+#
+#     session = Session()
+
+    # print(session.query(Lesson).all())
+    # print("*" * 60)
+    #
+    # for it in session.query(Lesson.lesson_title):
+    #     print(it[0])
+    # print(session.query(Lesson).count())
+    # print("*" * 60)
+    #
+    # print(session.query(Lesson).first())
+
+    # for it in session.query(Lesson).filter(not_(Lesson.id >= 3), not_(Lesson.lesson_title.like('М%'))):
+    #     print(it)
+    # print("*" * 60)
+
+    # for it, gr in session.query(Lesson.lesson_title, Group.group_name).filter(and_
+    # (association_table.c.lesson_id == Lesson.id, association_table.c.group_id == Group.id,
+    #  Group.group_name == 'MDA-7')):
+    #     print(it, gr)
+    # print(session.query(Lesson).filter(Lesson.lesson_title is not None).all())
+    # print(session.query(Lesson).filter(Lesson.lesson_title.notin_(['Математика', 'Линейная алгебра'])).all())
+
+    # print(session.query(Student).filter(Student.age.between(16, 17)).all())
+    # print(session.query(Student).filter(not_(Student.age.between(17, 24))).all())
+    # print(session.query(Student).filter(Student.age.like("1%")).limit(4))
+    # for it in session.query(Student).filter(Student.age.like("1%")).limit(4).offset(3):
+    #     print(it)
+
+    # for it in session.query(Student).order_by(desc(Student.surname)):
+    #     print(it)
+
+    # for it in session.query(Student).join(Group).filter(Group.group_name == 'MDA-7'):
+    #     print(it)
+
+    # for it in session.query(distinct(Student.age)):
+    #     print(it)
+
+    # for it in session.query(Student.age).filter(Student.age < 20).distinct():
+    #     print(it)
+
+    # for it in session.query(Lesson):
+    #     print(it.lesson_title)
+    # print("*" * 60)
+    #
+    # i = session.query(Lesson).first()
+    # i.lesson_title = "Информатика"
+    # session.add(i)
+    # session.commit()
+
+    # for it in session.query(Lesson):
+    #     print(it.lesson_title)
+    # print("*" * 60)
+    #
+    # session.query(Lesson).filter(Lesson.lesson_title.like("%м%")).update({"lesson_title": "М"},
+    # synchronize_session='fetch')
+    # session.commit()
+
+    # for it in session.query(Lesson):
+    #     print(it.lesson_title)
+    # print("*" * 60)
+    #
+    # session.add(Lesson(lesson_title="Математика"))
+    # session.commit()
+
+    # for it in session.query(Lesson):
+    #     print(it.lesson_title)
+    # print("*" * 60)
+    #
+    # i = session.query(Lesson).filter(Lesson.lesson_title == "Физика").one()
+    # session.delete(i)
+    # session.commit()
+    #
+    # for it in session.query(Lesson):
+    #     print(it.lesson_title)
+    # print("*" * 60)
 
 
-if __name__ == '__main__':
-    db_is_created = os.path.exists(DATABASE_NAME)
-    if not db_is_created:
-        db_creator.create_database()
+from jinja2 import Template
 
 
-    session = Session()
+# name = 'Игорь'
+# age = 28
+# per = {"name": "Igor", 'age': 28}
+#
+# tm = Template("Меня зовут {{p.name}}, мне {{p.age}} лет")
+# msg = tm.render(p=per)
+# print(msg)
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+# #
+#     def get_name(self):
+#         return self.name
+#
+#     def get_age(self):
+#         return self.age
+#
+# per = Person("Igor", 28)
+# tm = Template('Меня зовут {{ p["name"] }}, мне {{ p.age }} лет')
+# tm = Template('Меня зовут {{ p.get_name() }}, мне {{ p.get_age() }} лет')
+# msg = tm.render(p=per)
+#
+# print(msg)
+# #
+# cities = [
+#     {'id': 1, 'city': 'Moscow'},
+#     {'id': 2, 'city': 'Smolensk'},
+#     {'id': 3, 'city': 'Sochi'},
+#     {'id': 4, 'city': 'Minsk'},
+#     {'id': 5, 'city': 'Yaroslavl'},
+# ]
+
+# link = """<select>
+# {% for c in cities -%}
+#     {% if c.id > 3 -%}
+#     <option value="{{ c['id'] }}">{{c.city}}</option>
+#     {% elif c.city == "Moscow"%}
+#         <option>{{ c['city'] }}</option>
+#     {% else -%}
+#         {{ c['city'] }}
+#     {% endif -%}
+# {% endfor -%}
+# </select>"""
+#
+# tm = Template(link)
+# msg = tm.render(cities=cities)
+# print(msg)
+
+# cars = [2, 4, 5, 6, 7, 8]
+# cars = [
+#     {'model': 'Audi', 'price': 23000},
+#     {'model': 'Skoda', 'price': 17300},
+#     {'model': 'Renault', 'price': 44300},
+#     {'model': 'Volkswagen', 'price': 31300}
+# ]
+
+# tpl = "{{ (cs | max(attribute='price')).price }}"
+# tpl = "{{ cs | random }}"
+# tpl = "{{ cs | replace('model', 'brand') }}"
+
+# tm = Template(tpl)
+# msg = tm.render(cs=cars)
+# print(msg)
+
+# person = [
+#     {'name': 'Alexey', 'year': 18, 'weight': 78.5},
+#     {'name': 'Nikita', 'year': 28, 'weight': 82.3},
+#     {'name': 'Vitaly', 'year': 33, 'weight': 94.2}
+# ]
+#
+# tpl = """
+# {%- for u in user -%}
+#     {% filter upper -%}
+#         {{u.name}}
+#     {% endfilter -%}
+# {% endfor -%}
+# """
+# tm = Template(tpl)
+# msg = tm.render(user=person)
+# print(msg)
+
+# html = """
+# {% macro text_input(name, value='', type='text', size='40') %}
+#     <input type="{{type}}" name="{{ name }}" size="{{size}}" value="{{value}}">
+# {% endmacro %}
+# <p>{{ text_input('username') }}</p>
+# <p>{{ text_input('email') }}</p>
+# <p>{{ text_input('password') }}</p>
+# """
+#
+# tm = Template(html)
+# msg = tm.render()
+#
+# print(msg)
+
+
+
+# menu = [
+#     {'href': '/index', 'point': 'Главная'},
+#     {'href': '/news', 'point': 'Новости'},
+#     {'href': '/about', 'point': 'О компании'},
+#     {'href': '/shop', 'point': 'Магазин'},
+#     {'href': '/contacts', 'point': 'Контакты'},
+# ]
+#
+# link = """<ul>
+# {% for p in menu -%}
+#     {% if p.point == 'Главная' -%}
+#     <li><a class='active' href='{{p['href']}}'>{{p.point}}</a></li>
+#     {% else -%}
+#         <li><a href='{{p['href']}}'>{{p.point}}</a></li>
+#     {% endif -%}
+# {%- endfor -%}
+# </ul>"""
+#
+# tm = Template(link)
+# msg = tm.render(menu=menu)
+# print(msg)
+
+
+html = """
+{%- macro text_input(type, name, placeholder) -%}
+    <input type="{{type}}" name="{{ name }}" placeholder="{{placeholder}}">
+{%- endmacro -%}
+<p>{{ text_input('text', 'firstname', 'Имя') }}</p>
+<p>{{ text_input('text', 'lastname', 'Фамилия') }}</p>
+<p>{{ text_input('text', 'address', 'Адрес') }}</p>
+<p>{{ text_input('tel', 'phone', 'Телефон') }}</p>
+<p>{{ text_input('email', 'email', 'Почта') }}</p>
+"""
+
+tm = Template(html)
+msg = tm.render()
+
+print(msg)
