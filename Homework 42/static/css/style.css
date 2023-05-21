@@ -1,0 +1,27 @@
+body{
+    background: #00CC00;
+    padding: 0;
+    margin: 0;
+}
+
+.menu{
+     background: #E266B7;
+     display: flex;
+     justify-content: space-around;
+}
+
+.content {
+     text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    color: #800053;
+}
+
+.contact{
+    padding-left: 40px;
+}
