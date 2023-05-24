@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<div class="card">
+<p><span>Наименование товара:</span> {{ item.name }}</p>
+<p><span>Описание товара:</span> {{ item.description}}</p>
+<p><span>Цена, руб.</span>: {{ item.price }}</p>
+</div>
+{% endblock %}

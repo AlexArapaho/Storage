@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h2 class="center">Личный кабинет {{ username }}</h2>
+<div class='but' >
+    <form action="/add_item" method="post">
+        <input class="sub" type="submit" value="Добавить карточку товара">
+    </form>
+</div>
+{% endblock content %}

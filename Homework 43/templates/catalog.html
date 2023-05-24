@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{{ super() }}
+<h2 class="center">Каталог товаров</h2>
+<div class="prod_name">
+    <ul>
+    {% for i in items %}
+    <li class="xxx">
+        <div><a href="{{ url_for('show_item', id_item=i.id) }}">{{ i.name }}</a></div>
+    </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock content %}
