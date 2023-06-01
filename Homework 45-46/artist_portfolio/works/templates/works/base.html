@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'works/3.ico' %}">
+</head>
+<body>
+<div class="content">
+    <div class="wrap">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'works/4.png' %}"></a>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
