@@ -1,0 +1,12 @@
+{% extends 'works/base.html' %}
+
+{% block content %}
+<h1>Авторизация</h1>
+<div>{{ error }}</div>
+<form method='post'>
+{% csrf_token %}
+{{ form.as_p }}
+<div><button>Авторизация</button></div>
+</form>
+
+{% endblock %}
