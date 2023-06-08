@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'works/3.ico' %}">
+</head>
+<body>
+{% if user.is_authenticated %}
+
+<div class="content">
+    <div class="wrap">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'works/4.png' %}"></a>
+        </div>
+        <div class="menu2">
+            <form class="out" action="{% url 'logoutuser' %}" method="post">
+                    {% csrf_token %}
+                    <button class="top">Выйти</button>
+            </form>
+            <p class="user">Пользователь: {{ user.username }}</p>
+            <div class="out">
+
+                <a class="inf" href="{% url 'contacts' %}">Информация для связи</a>
+            </div>
+            <a class="inf" href="{% url 'feedback' %}">Оставить отзыв</a>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="content">
+    <div class="wrap">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'works/4.png' %}"></a>
+        </div>
+
+       <div class="menu">
+            <a href="{% url 'signupuser' %}">Зарегистрироваться</a>
+            <a href="{% url 'loginuser' %}">Войти</a>
+            <a href="{% url 'contacts' %}">Информация для связи</a>
+            <a href="{% url 'feedback' %}">Оставить отзыв</a>
+        </div>
+</div>
+{% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>

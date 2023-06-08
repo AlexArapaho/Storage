@@ -1,0 +1,12 @@
+{% extends 'works/base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="feed">Напишите отзыв о понравившейся работе</h2>
+
+<div>{{ error }}</div>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div><button class="btn">Отправить отзыв</button></div>
+</form>
+{% endblock %}

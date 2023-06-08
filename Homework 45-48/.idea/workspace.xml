@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="64abe24d-3af3-425d-9b44-1e05473e5226" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/Homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/Homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 43/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework 43/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/.idea/Homework 45.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/artist_portfolio/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/artist_portfolio/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/artist_portfolio/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/artist_portfolio/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/artist_portfolio/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/character.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/character_S3tszKd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/food_illustration.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/food_illustration_8R6s5bo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/food_illustration_E3CUHgA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/food_illustration_FaW89L8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/food_illustration_gMj74Mk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/landscape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/landscape_6yrFdUL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/landscape_Iae46z4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/landscape_KwZPd88.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/landscape_LDitmjt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/media/works/images/landscape_qyLKYJS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/static/works/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/static/works/3.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/static/works/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/static/works/5.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/templates/works/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/templates/works/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45-46/artist_portfolio/works/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artist_portfolio/artist_portfolio/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/artist_portfolio/artist_portfolio/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artist_portfolio/artist_portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/artist_portfolio/artist_portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artist_portfolio/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/artist_portfolio/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artist_portfolio/works/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/artist_portfolio/works/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artist_portfolio/works/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/artist_portfolio/works/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artist_portfolio/works/templates/works/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/artist_portfolio/works/templates/works/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artist_portfolio/works/templates/works/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/artist_portfolio/works/templates/works/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/artist_portfolio/works/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/artist_portfolio/works/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/.idea/Homework 45.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/artist_portfolio/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/artist_portfolio/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/artist_portfolio/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/artist_portfolio/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/artist_portfolio/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/character.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/character_S3tszKd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/city.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/food_illustration.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/food_illustration_8R6s5bo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/food_illustration_E3CUHgA.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/food_illustration_FaW89L8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/food_illustration_gMj74Mk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/landscape.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/landscape_6yrFdUL.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/landscape_Iae46z4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/landscape_KwZPd88.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/landscape_LDitmjt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/media/works/images/landscape_qyLKYJS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/static/works/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/templates/works/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/templates/works/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Homework 45/artist_portfolio/works/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ind.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ind.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../main.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QVTGLuiVJycDGF7cdcVRM3eekD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/leap/Documents/Python/Homework/Homework 45-47",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leap\Documents\Python\Homework\Homework 45\artist_portfolio\works" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Homework 45" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64abe24d-3af3-425d-9b44-1e05473e5226" name="Changes" comment="" />
+      <created>1685437651695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685437651695</updated>
+    </task>
+    <servers />
+  </component>
+</project>
